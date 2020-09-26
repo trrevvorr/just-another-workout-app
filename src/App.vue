@@ -1,19 +1,51 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Routines
+      v-if="selectedRoutineId === null"
+      :routines="routines"
+      @choose="(id) => (selectedRoutineId = id)"
+    />
+    <Routine
+      v-else-if="selectedSessionindex === null"
+      :routine="routines[selectedRoutineId]"
+      @choose="(i) => (selectedSessionindex = i)"
+    />
+    <Session
+      v-else
+      :session="routines[selectedRoutineId].sessions[selectedSessionindex]"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Routines from "./components/Routines.vue";
+import Routine from "./components/Routine.vue";
+import Session from "./components/Session.vue";
+import { getRoutines } from "./api/api.js";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Routines,
+    Routine,
+    Session,
+  },
+  data: function() {
+    return {
+      routines: [],
+      selectedRoutineId: null,
+      selectedSessionindex: null,
+    };
+  },
+  created: function() {
+    this.loadData();
+  },
+  methods: {
+    loadData: function() {
+      this.routines = getRoutines();
+    },
+  },
+};
 </script>
 
 <style>
@@ -21,8 +53,9 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 1rem;
+  /* margin-top: 60px; */
 }
 </style>
