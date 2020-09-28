@@ -8,16 +8,33 @@
         :key="index"
       >
         <span class="session-name">{{ session.name }}</span>
-        <button @click="$emit('choose', index)">Start</button>
+        <RouterLinkButton
+          :to="{
+            name: 'Session',
+            params: { routineId, sessionId: index.toString() },
+          }"
+        >
+          Select
+        </RouterLinkButton>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import RouterLinkButton from "../components/RouterLinkButton";
 export default {
   props: {
-    routine: Object,
+    routines: Object,
+    routineId: String,
+  },
+  components: {
+    RouterLinkButton,
+  },
+  computed: {
+    routine: function() {
+      return this.routines[this.routineId];
+    },
   },
 };
 </script>
@@ -30,7 +47,7 @@ export default {
   margin-bottom: 1rem;
 }
 
-.session button {
+.session router-link {
   background-color: inherit;
   border: 1px solid gray;
   border-radius: 1rem;

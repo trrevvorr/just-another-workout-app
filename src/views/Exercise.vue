@@ -9,7 +9,9 @@
         <span class="index">Set</span>
         <span class="reps">Reps</span>
         <span class="weight">Weight</span>
-        <button disabled="true" class="hidden-button">Done</button>
+        <Button :disabled="true" class="hidden-button">
+          Done
+        </Button>
       </div>
       <div
         v-for="(set, index) in exercise.sets"
@@ -19,26 +21,39 @@
         <span class="index">{{ index + 1 }}</span>
         <span class="reps">{{ set.reps }}</span>
         <span class="weight">{{ set.weight }} lbs</span>
-        <button
+        <Button
           :disabled="completedSets.includes(index)"
           @click="() => completeSet(index)"
         >
           Done
-        </button>
+        </Button>
       </div>
     </div>
+    <ExerciseNavigation
+      :routines="routines"
+      :routineId="routineId"
+      :sessionId="sessionId"
+      :exerciseId="exerciseId"
+    />
   </div>
 </template>
 
 <script>
-import Timer from "./Timer.vue";
+import Timer from "../components/Timer.vue";
+import ExerciseNavigation from "../components/ExerciseNavigator.vue";
+import Button from "../components/Button.vue";
 
 export default {
   props: {
-    exercise: Object,
+    routines: Object,
+    routineId: String,
+    sessionId: String,
+    exerciseId: String,
   },
   components: {
     Timer,
+    ExerciseNavigation,
+    Button,
   },
   data: function() {
     return {
@@ -47,16 +62,16 @@ export default {
     };
   },
   watch: {
-    completedSets: function(newCompletedSets) {
-      if (newCompletedSets.length === this.exercise.sets.length) {
-        this.$emit("complete");
-      }
-    },
     exercise: function() {
       this.completedSets = [];
     },
   },
   computed: {
+    exercise: function() {
+      return this.routines[this.routineId].sessions[this.sessionId].exercises[
+        this.exerciseId
+      ];
+    },
     nextSet: function() {
       const incompleteSets = this.exercise.sets.filter(
         (set, index) => !this.completedSets.includes(index)

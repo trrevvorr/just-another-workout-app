@@ -1,6 +1,6 @@
 export function getRoutines() {
   return {
-    1: {
+    "1": {
       name: "At Home Workout",
       sessions: [
         {
@@ -51,7 +51,7 @@ export function getRoutines() {
         },
       ],
     },
-    2: {
+    "2": {
       name: "5 x 5",
       sessions: [
         {
