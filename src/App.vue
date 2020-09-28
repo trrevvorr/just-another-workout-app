@@ -1,6 +1,8 @@
 <template>
   <div id="app">
+    <NavBar />
     <router-view
+      class="body"
       :routines="routines"
       :routineId="$route.params.routineId"
       :sessionId="$route.params.sessionId"
@@ -11,6 +13,7 @@
 
 <script>
 import { getRoutines } from "./api/api.js";
+import NavBar from "./components/NavBar";
 
 export default {
   name: "App",
@@ -23,6 +26,9 @@ export default {
     return {
       routines: [],
     };
+  },
+  components: {
+    NavBar,
   },
   created: function() {
     this.loadData();
@@ -41,19 +47,18 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin: 1rem;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 
-#nav {
-  padding: 30px;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.body {
+  margin: 0 1rem;
+  overflow-y: auto;
 }
 </style>
