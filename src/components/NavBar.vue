@@ -70,7 +70,7 @@ export default {
 }
 
 .menu a {
-  color: black;
+  color: #1c201e;
   display: inline-block;
   padding: 0.25rem 0;
   width: 100%;

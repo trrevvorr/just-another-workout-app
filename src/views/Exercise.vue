@@ -107,7 +107,7 @@ export default {
 <style scoped>
 .header {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 3fr 1fr;
   margin-bottom: 1rem;
   margin: 1rem 0;
 }
@@ -120,7 +120,7 @@ export default {
 .header-row {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-bottom: 1rem;
 }
 
@@ -135,7 +135,7 @@ export default {
 .complete .index,
 .complete .reps,
 .complete .weight {
-  color: gray;
+  opacity: 50%;
 }
 
 .header-row {

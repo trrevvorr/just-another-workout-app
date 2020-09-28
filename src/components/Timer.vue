@@ -1,6 +1,6 @@
 <template>
   <div class="timer">
-    <span>Next Set:</span>
+    <span class="label">Next Set</span>
     <span :class="seconds <= 5 ? 'time-remaining warning' : 'time-remaining'"
       >{{ seconds }} s</span
     >
@@ -59,15 +59,24 @@ export default {
 <style scoped>
 .timer {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  background-color: #879990;
+  border-radius: 10px;
+  padding: 0.25rem;
+  text-align: center;
+}
+
+.label {
+  color: #1c201e;
 }
 
 .time-remaining {
-  margin-left: 5px;
+  color: #1c201e;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
-.time-remaining.warning {
-  color: red;
-}
+/* .time-remaining.warning {
+  color: #db6870;
+} */
 </style>

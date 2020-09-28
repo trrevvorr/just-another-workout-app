@@ -15,13 +15,13 @@ export default {
 
 <style scoped>
 .wrapper {
-  border: 1px solid black;
+  border: 1px solid #dfe9e4;
   border-radius: 1rem;
 }
 
 .wrapper:hover,
 .wrapper:focus {
-  background-color: #9fc2e16b;
+  background-color: #879990b3;
 }
 
 .wrapper a {
