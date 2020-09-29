@@ -1,18 +1,17 @@
 <template>
   <div>
     <div class="header">
-      <h3>{{ exercise.name }}</h3>
+      <div>
+        <h3>{{ exercise.name }}</h3>
+        <div class="header-row">
+          <span class="index">Set</span>
+          <span class="reps">Reps</span>
+          <span class="weight">Weight</span>
+        </div>
+      </div>
       <Timer :initialSeconds="restBeforeNextSet" :isRunning="timerRunning" />
     </div>
     <div class="list">
-      <div class="header-row">
-        <span class="index">Set</span>
-        <span class="reps">Reps</span>
-        <span class="weight">Weight</span>
-        <Button :disabled="true" class="hidden-button">
-          Done
-        </Button>
-      </div>
       <div
         v-for="(set, index) in exercise.sets"
         :class="completedSets.includes(index) ? 'complete set' : 'set'"
@@ -107,6 +106,7 @@ export default {
 <style scoped>
 .header {
   display: grid;
+  align-items: start;
   grid-template-columns: 3fr 1fr;
   margin-bottom: 1rem;
   margin: 1rem 0;
@@ -114,18 +114,25 @@ export default {
 
 .header h3 {
   margin: 0;
+  margin-bottom: 1rem;
 }
 
 .set,
 .header-row {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-bottom: 1rem;
 }
 
-.set button,
-.hidden-button {
+.set {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.header-row {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.set button {
   background-color: inherit;
   border: 1px solid gray;
   border-radius: 1rem;

@@ -60,23 +60,14 @@ export default {
 .timer {
   display: grid;
   grid-template-rows: auto 1fr;
-  background-color: #879990;
+  background-color: #3c4d45;
   border-radius: 10px;
   padding: 0.25rem;
   text-align: center;
 }
 
-.label {
-  color: #1c201e;
-}
-
 .time-remaining {
-  color: #1c201e;
   font-size: 1.5rem;
   font-weight: bold;
 }
-
-/* .time-remaining.warning {
-  color: #db6870;
-} */
 </style>

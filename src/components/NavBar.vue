@@ -66,11 +66,11 @@ export default {
 
 .menu {
   padding: 1rem;
-  background-color: #879990b3;
+  background-color: #3c4d45;
 }
 
 .menu a {
-  color: #1c201e;
+  color: #e1e5e3;
   display: inline-block;
   padding: 0.25rem 0;
   width: 100%;

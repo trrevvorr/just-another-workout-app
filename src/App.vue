@@ -47,7 +47,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #1c201e;
-  color: #dfe9e4;
+  color: #e1e5e3;
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr;

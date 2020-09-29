@@ -22,20 +22,19 @@ export default {
 
 .wrapper button {
   margin: auto;
-  background-color: inherit;
+  background-color: #3c4d45;
   padding: 0.25rem 1rem;
-  border: 1px solid #dfe9e4;
+  border: none;
   border-radius: 1rem;
   color: inherit;
   cursor: pointer;
 }
 .wrapper button:hover:not([disabled]),
 .wrapper button:focus:not([disabled]) {
-  background-color: #879990b3;
+  background-color: #879990;
 }
 
 .wrapper button:disabled {
-  border: 1px solid gray;
   opacity: 50%;
   cursor: not-allowed;
 }

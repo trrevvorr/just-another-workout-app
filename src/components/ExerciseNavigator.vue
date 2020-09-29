@@ -98,6 +98,7 @@ export default {
   width: 100%;
   display: grid;
   grid-template-columns: auto 1fr auto;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 </style>
