@@ -36,7 +36,9 @@ export default {
 }
 
 .wrapper button:disabled {
-  opacity: 50%;
+  background-color: #3c4d4580;
+  color: #e1e5e380;
   cursor: not-allowed;
+  text-decoration: line-through;
 }
 </style>

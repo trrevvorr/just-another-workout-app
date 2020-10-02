@@ -21,5 +21,10 @@ https://medium.com/@Roli_Dori/deploy-vue-cli-3-project-to-github-pages-ebeda0705
 npm run lint
 ```
 
+### Deploy changes to Github Pages
+```
+./deploy.sh
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

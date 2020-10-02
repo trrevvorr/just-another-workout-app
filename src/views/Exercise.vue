@@ -140,7 +140,8 @@ export default {
 .complete .index,
 .complete .reps,
 .complete .weight {
-  opacity: 50%;
+  color: #e1e5e380;
+  text-decoration: line-through;
 }
 
 .header-row {
