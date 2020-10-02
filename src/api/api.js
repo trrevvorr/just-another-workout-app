@@ -9,9 +9,9 @@ export function getRoutines() {
             {
               name: "Concentration Curls",
               sets: [
-                { reps: 10, weight: 30, rest: 10 },
-                { reps: 10, weight: 30, rest: 10 },
-                { reps: 10, weight: 30, rest: 10 },
+                { reps: 10, weight: 30, rest: 60 },
+                { reps: 10, weight: 30, rest: 60 },
+                { reps: 10, weight: 30, rest: 60 },
                 { reps: 10, weight: 30, rest: 60 },
               ],
             },
@@ -22,28 +22,79 @@ export function getRoutines() {
                 { reps: 10, weight: 35, rest: 60 },
                 { reps: 10, weight: 35, rest: 60 },
                 { reps: 10, weight: 35, rest: 60 },
+              ],
+            },
+            {
+              name: "Chin-Ups",
+              sets: [
+                { reps: 10, weight: 0, rest: 60 },
+                { reps: 10, weight: 0, rest: 60 },
+                { reps: 10, weight: 0, rest: 60 },
+                { reps: 10, weight: 0, rest: 60 },
+              ],
+            },
+          ],
+        },
+        {
+          name: "Chest",
+          exercises: [
+            {
+              name: "Dumbbell Fly",
+              sets: [
                 { reps: 10, weight: 35, rest: 60 },
                 { reps: 10, weight: 35, rest: 60 },
                 { reps: 10, weight: 35, rest: 60 },
                 { reps: 10, weight: 35, rest: 60 },
-                { reps: 10, weight: 35, rest: 60 },
-                { reps: 10, weight: 35, rest: 60 },
-                { reps: 10, weight: 35, rest: 60 },
-                { reps: 10, weight: 35, rest: 60 },
-                { reps: 10, weight: 35, rest: 60 },
-                { reps: 10, weight: 35, rest: 60 },
-                { reps: 10, weight: 35, rest: 60 },
-                { reps: 10, weight: 35, rest: 60 },
-                { reps: 10, weight: 35, rest: 60 },
-                { reps: 10, weight: 35, rest: 60 },
-                { reps: 10, weight: 35, rest: 60 },
-                { reps: 10, weight: 35, rest: 60 },
-                { reps: 10, weight: 35, rest: 60 },
-                { reps: 10, weight: 35, rest: 60 },
-                { reps: 10, weight: 35, rest: 60 },
-                { reps: 10, weight: 35, rest: 60 },
-                { reps: 10, weight: 35, rest: 60 },
-                { reps: 10, weight: 35, rest: 60 },
+              ],
+            },
+            {
+              name: "Dumbbell Press",
+              sets: [
+                { reps: 10, weight: 50, rest: 60 },
+                { reps: 10, weight: 50, rest: 60 },
+                { reps: 10, weight: 50, rest: 60 },
+                { reps: 10, weight: 50, rest: 60 },
+              ],
+            },
+            {
+              name: "Pushups",
+              sets: [
+                { reps: 10, weight: 0, rest: 60 },
+                { reps: 10, weight: 0, rest: 60 },
+                { reps: 10, weight: 0, rest: 60 },
+                { reps: 10, weight: 0, rest: 60 },
+              ],
+            },
+          ],
+        },
+        {
+          name: "Legs",
+          exercises: [
+            {
+              name: "Lunges",
+              sets: [
+                { reps: 10, weight: 20, rest: 60 },
+                { reps: 10, weight: 20, rest: 60 },
+                { reps: 10, weight: 20, rest: 60 },
+                { reps: 10, weight: 20, rest: 60 },
+              ],
+            },
+            {
+              name: "Bench Jumps",
+              sets: [
+                { reps: 10, weight: 0, rest: 60 },
+                { reps: 10, weight: 0, rest: 60 },
+                { reps: 10, weight: 0, rest: 60 },
+                { reps: 10, weight: 0, rest: 60 },
+              ],
+            },
+            {
+              name: "Calf Raises",
+              sets: [
+                { reps: 30, weight: 0, rest: 60 },
+                { reps: 30, weight: 0, rest: 60 },
+                { reps: 30, weight: 0, rest: 60 },
+                { reps: 30, weight: 0, rest: 60 },
               ],
             },
           ],
@@ -69,6 +120,47 @@ export function getRoutines() {
                 { reps: 10, weight: 50, rest: 60 },
               ],
             },
+            {
+              name: "Close-Grip Pushups",
+              sets: [
+                { reps: 10, weight: 0, rest: 60 },
+                { reps: 10, weight: 0, rest: 60 },
+                { reps: 10, weight: 0, rest: 60 },
+                { reps: 10, weight: 0, rest: 60 },
+              ],
+            },
+          ],
+        },
+        {
+          name: "Back",
+          exercises: [
+            {
+              name: "Dumbbell Rows",
+              sets: [
+                { reps: 10, weight: 50, rest: 60 },
+                { reps: 10, weight: 50, rest: 60 },
+                { reps: 10, weight: 50, rest: 60 },
+                { reps: 10, weight: 50, rest: 60 },
+              ],
+            },
+            {
+              name: "Bent-Over Dumbbell Fly",
+              sets: [
+                { reps: 10, weight: 25, rest: 60 },
+                { reps: 10, weight: 25, rest: 60 },
+                { reps: 10, weight: 25, rest: 60 },
+                { reps: 10, weight: 25, rest: 60 },
+              ],
+            },
+            {
+              name: "Wide-Grip Pull-Up",
+              sets: [
+                { reps: 10, weight: 0, rest: 60 },
+                { reps: 10, weight: 0, rest: 60 },
+                { reps: 10, weight: 0, rest: 60 },
+                { reps: 10, weight: 0, rest: 60 },
+              ],
+            },
           ],
         },
       ],
@@ -82,11 +174,11 @@ export function getRoutines() {
             {
               name: "Bench Press",
               sets: [
-                { reps: 5, weight: 135, rest: 60 },
-                { reps: 5, weight: 135, rest: 60 },
-                { reps: 5, weight: 135, rest: 60 },
-                { reps: 5, weight: 135, rest: 60 },
-                { reps: 5, weight: 135, rest: 60 },
+                { reps: 5, weight: 135, rest: 10 },
+                { reps: 5, weight: 135, rest: 10 },
+                { reps: 5, weight: 135, rest: 10 },
+                { reps: 5, weight: 135, rest: 10 },
+                { reps: 5, weight: 135, rest: 10 },
               ],
             },
             {
