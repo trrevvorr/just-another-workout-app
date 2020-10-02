@@ -1,5 +1,5 @@
 {
-  "name": "just-another-workout-app",
+  "name": "JAWA",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,12 +13,14 @@
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/vue-fontawesome": "^2.0.0",
     "core-js": "^3.6.5",
+    "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-router": "^3.4.5"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-pwa": "^4.5.6",
     "@vue/cli-plugin-router": "^4.5.6",
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",

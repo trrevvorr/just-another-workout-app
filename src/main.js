@@ -8,6 +8,7 @@ import {
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import './registerServiceWorker'
 
 library.add(faAngleRight, faAngleLeft, faBars);
 
