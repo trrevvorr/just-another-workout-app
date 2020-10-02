@@ -28,6 +28,7 @@ export default {
   border-radius: 1rem;
   color: inherit;
   cursor: pointer;
+  font-size: 1.25rem;
 }
 .wrapper button:hover:not([disabled]),
 .wrapper button:focus:not([disabled]) {

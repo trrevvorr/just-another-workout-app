@@ -2,7 +2,7 @@
   <div class="timer">
     <span class="label">Next Set</span>
     <span :class="seconds <= 5 ? 'time-remaining warning' : 'time-remaining'"
-      >{{ seconds }} s</span
+      >{{ seconds }}s</span
     >
   </div>
 </template>
@@ -66,8 +66,13 @@ export default {
   text-align: center;
 }
 
+.label {
+  font-size: 1rem;
+}
+
 .time-remaining {
   font-size: 1.5rem;
   font-weight: bold;
+  font-size: 2rem;
 }
 </style>

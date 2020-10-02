@@ -29,5 +29,6 @@ export default {
   padding: 0.25rem 1rem;
   text-decoration: unset;
   color: inherit;
+  font-size: 1.25rem;
 }
 </style>

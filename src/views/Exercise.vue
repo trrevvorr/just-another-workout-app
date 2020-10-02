@@ -71,20 +71,18 @@ export default {
         this.exerciseId
       ];
     },
-    nextSet: function() {
-      const incompleteSets = this.exercise.sets.filter(
-        (set, index) => !this.completedSets.includes(index)
-      );
-
-      if (incompleteSets.length) {
-        return incompleteSets[0];
+    lastSet: function() {
+      if (this.completedSets.length) {
+        return this.exercise.sets[
+          this.completedSets[this.completedSets.length - 1]
+        ];
       } else {
         return null;
       }
     },
     restBeforeNextSet: function() {
-      if (this.nextSet && this.nextSet.rest && this.completedSets.length > 0) {
-        return this.nextSet.rest;
+      if (this.lastSet) {
+        return this.lastSet.rest;
       } else {
         return 0;
       }

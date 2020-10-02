@@ -59,7 +59,7 @@ export default {
 }
 
 .bar button {
-  font-size: 1rem;
+  font-size: 1.5rem;
   background-color: inherit;
   border: none;
 }
@@ -75,5 +75,6 @@ export default {
   padding: 0.25rem 0;
   width: 100%;
   text-decoration: none;
+  font-size: 1.25rem;
 }
 </style>

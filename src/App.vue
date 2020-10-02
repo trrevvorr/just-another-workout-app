@@ -61,5 +61,6 @@ body {
 .body {
   margin: 0 1rem;
   overflow-y: auto;
+  font-size: 1.5rem;
 }
 </style>
