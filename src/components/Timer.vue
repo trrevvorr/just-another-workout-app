@@ -17,6 +17,9 @@ export default {
     return {
       seconds: this.initialSeconds,
       interval: null,
+      audioContext: new (window.AudioContext ||
+        window.webkitAudioContext ||
+        window.audioContext)(),
     };
   },
   watch: {
@@ -27,9 +30,19 @@ export default {
         this.resetTimer();
       }
     },
-    seconds: function(newSeconds) {
+    seconds: function(newSeconds, oldSeconds) {
       if (newSeconds <= 0) {
         this.stopTimer();
+      }
+
+      if (oldSeconds === 1 && newSeconds === 0) {
+        this.beep(500, 1500);
+      } else if (newSeconds === 1) {
+        this.beep(250, 1000);
+      } else if (newSeconds === 2) {
+        this.beep(250, 1000);
+      } else if (newSeconds === 3) {
+        this.beep(250, 1000);
       }
     },
     initialSeconds: function() {
@@ -51,6 +64,22 @@ export default {
     },
     stopTimer: function() {
       clearInterval(this.interval);
+    },
+    beep: function(duration, frequency) {
+      var oscillator = this.audioContext.createOscillator();
+      var gainNode = this.audioContext.createGain();
+
+      oscillator.connect(gainNode);
+      gainNode.connect(this.audioContext.destination);
+
+      if (frequency) {
+        oscillator.frequency.value = frequency;
+      }
+
+      gainNode.gain.value = 1;
+      oscillator.type = "sine";
+      oscillator.start(this.audioContext.currentTime);
+      oscillator.stop(this.audioContext.currentTime + (duration || 500) / 1000);
     },
   },
 };
